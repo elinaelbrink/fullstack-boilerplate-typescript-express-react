@@ -6,5 +6,9 @@ router.get("/ping", (req: Request, res: Response) => {
   res.send("pong")
 })
 
+router.get("/transactions", (req: Request, res: Response) => {
+  res.send()
+})
+
 
 export default router;

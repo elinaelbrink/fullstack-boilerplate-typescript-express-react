@@ -1,14 +1,19 @@
-.body {
-  padding: 40px;
+body {
   background-color: #c6d7e0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headerTitle {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #34566a;
 }
 
 .contentContainer {
@@ -19,7 +24,7 @@
 .newTransactionContainer {
   background-color: #fafbfc;
   border: 1px solid #FFFFFF;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 0px 20px 20px 20px;
 }
@@ -50,14 +55,20 @@
   width: 100%;
 }
 
+.submit:hover {
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f0a259;
+}
+
 .transactionHistoryContainer {
   background-color: #fafbfc;
   border: 1px solid #FFFFFF;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 0px 20px 20px 20px;
   width: 100%;
-  max-width: 600px;
+  min-width: 600px;
   margin-left: 20px;
 }
 

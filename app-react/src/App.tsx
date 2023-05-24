@@ -5,12 +5,6 @@ import TransactionHistory from './components/TransactionHistory';
 
 function App() {
 
-  useEffect(() => {
-    fetch('https://infra.devskills.app/transaction-management/api/3.1.0/transactions')
-    .then(response => response.json())
-    .then(res => console.log(res))
-  }, [])
-
 
   return (
    <>
