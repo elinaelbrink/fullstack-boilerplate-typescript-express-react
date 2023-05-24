@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import SubmitNewTransaction from './components/SubmitNewTransaction';
+import TransactionHistory from './components/TransactionHistory';
 
 function App() {
+
+  useEffect(() => {
+    fetch('https://infra.devskills.app/transaction-management/api/3.1.0/transactions')
+    .then(response => response.json())
+    .then(res => console.log(res))
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <>
+    <div className='body'>
+      <div className='headerTitle'>Transaction Management</div>
+      <div className='contentContainer'>
+        <SubmitNewTransaction />
+        <TransactionHistory />
+      </div>
     </div>
+   </>
   );
 }
 
